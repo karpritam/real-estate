@@ -24,7 +24,7 @@ const Projects = () => {
 	const nextProject = () => {
 		setCurrentIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
 	};
-	const PrevProject = () => {
+	const prevProject = () => {
 		setCurrentIndex((prevIndex) =>
 			prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
 		);
@@ -47,7 +47,7 @@ const Projects = () => {
 			{/* -----slider button---- */}
 			<div className="flex justify-end items-center mb-8">
 				<button
-					onClick={PrevProject}
+					onClick={prevProject}
 					className="p-3 bg-gray-200 rounded mr-2"
 					aria-label="Previous Project">
 					<img src={left_arrow} alt="previous" />
