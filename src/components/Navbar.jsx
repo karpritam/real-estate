@@ -37,7 +37,9 @@ const Navbar = () => {
 	return (
 		<div className="absolute top-0 left-0 w-full z-10">
 			<div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent">
-				<img className="cursor-pointer" src={assets} alt="icon" />
+				<a href="#Header">
+					<img className="cursor-pointer" src={assets} alt="icon" />
+				</a>
 				<ul className="hidden md:flex gap-7 text-white">
 					<a href="#Header" className="cursor-pointer hover:text-gray-400">
 						Home
@@ -48,7 +50,9 @@ const Navbar = () => {
 					<a href="#Projects" className="cursor-pointer hover:text-gray-400">
 						Projects
 					</a>
-					<a href="#Testimonials" className="cursor-pointer hover:text-gray-400">
+					<a
+						href="#Testimonials"
+						className="cursor-pointer hover:text-gray-400">
 						Testimonials
 					</a>
 				</ul>
