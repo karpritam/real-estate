@@ -1,9 +1,14 @@
 import React from "react";
 import { assets, testimonialsData } from "../assets/assets";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
 	return (
-		<div
+		<motion.div
+			initial={{ opacity: 0, x: 100 }}
+			transition={{ duration: 1 }}
+			whileInView={{ opacity: 1, x: 0 }}
+			viewport={{ once: true }}
 			className="container mx-auto  py-10 lg:px-32 w-full overflow-hidden "
 			id="Testimonials">
 			<h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
@@ -20,7 +25,7 @@ const Testimonials = () => {
 				{testimonialsData.map((testimonial, index) => (
 					<div
 						key={index}
-						className="max-w-[340px] border shadow-lg rounded px-8 py-12 text-center">
+						className="max-w-[340px] border shadow-lg rounded px-8 py-12 text-center transition-all duration-300 ease-out delay-75 hover:scale-105 hover:shadow-xl">
 						<img
 							className="w-20 h-20 rounded-full mx-auto mb-4"
 							src={testimonial.image}
@@ -39,7 +44,7 @@ const Testimonials = () => {
 					</div>
 				))}
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 
